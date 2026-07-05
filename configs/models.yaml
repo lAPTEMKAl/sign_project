@@ -1,0 +1,43 @@
+# Гиперпараметры обучения по каждой архитектуре.
+# Трансформер (ViT) учится отдельной схемой.
+
+common:
+  img_size: 224
+  batch_size: 32
+  num_workers: 4
+  optimizer: adamw
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  early_stopping_patience: 5
+
+models:
+  resnet18:
+    epochs: 20
+    lr: 0.001
+    pretrained: true
+    freeze_backbone_epochs: 0
+
+  mobilenet_v3_small:
+    epochs: 25
+    lr: 0.001
+    pretrained: true
+    freeze_backbone_epochs: 0
+
+  efficientnet_b0:
+    epochs: 20
+    lr: 0.0008
+    pretrained: true
+    freeze_backbone_epochs: 0
+
+  densenet121:
+    epochs: 20
+    lr: 0.0008
+    pretrained: true
+    freeze_backbone_epochs: 0
+
+  vit_b_16:
+    epochs: 15
+    lr: 0.00005
+    pretrained: true
+    freeze_backbone_epochs: 2   # сначала учим только голову, потом размораживаем
+    warmup_epochs: 1

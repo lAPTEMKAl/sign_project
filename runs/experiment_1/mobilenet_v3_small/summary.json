@@ -1,0 +1,13 @@
+{
+  "arch": "mobilenet_v3_small",
+  "device": "cuda",
+  "img_size": 224,
+  "epochs_run": 25,
+  "best_val_acc": 0.9971075466736786,
+  "test_acc": 0.9975341114581621,
+  "test_loss": 0.823240591647612,
+  "avg_inference_ms": 2.6273393630981445,
+  "model_size_mb": 6.333660125732422,
+  "num_classes": 139,
+  "checkpoint": "runs\\experiment_1\\mobilenet_v3_small\\best.pt"
+}

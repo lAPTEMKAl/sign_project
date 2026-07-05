@@ -1,0 +1,13 @@
+{
+  "arch": "densenet121",
+  "device": "cuda",
+  "img_size": 224,
+  "epochs_run": 19,
+  "best_val_acc": 0.9973704969760715,
+  "test_acc": 0.9975341114581621,
+  "test_loss": 0.8266052689948953,
+  "avg_inference_ms": 8.011255264282227,
+  "model_size_mb": 27.070354461669922,
+  "num_classes": 139,
+  "checkpoint": "runs\\experiment_1\\densenet121\\best.pt"
+}

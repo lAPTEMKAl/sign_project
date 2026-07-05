@@ -1,0 +1,7 @@
+venv/
+data/
+models/
+runs/experiment_1/*/best.pt
+__pycache__/
+*.pyc
+fix.py

@@ -1,0 +1,13 @@
+{
+  "arch": "resnet18",
+  "device": "cuda",
+  "img_size": 224,
+  "epochs_run": 20,
+  "best_val_acc": 0.9969760715224822,
+  "test_acc": 0.9984382705901693,
+  "test_loss": 0.8215690382252433,
+  "avg_inference_ms": 1.9273710250854492,
+  "model_size_mb": 42.90702438354492,
+  "num_classes": 139,
+  "checkpoint": "runs\\experiment_1\\resnet18\\best.pt"
+}

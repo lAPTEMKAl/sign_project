@@ -1,0 +1,13 @@
+{
+  "arch": "efficientnet_b0",
+  "device": "cuda",
+  "img_size": 224,
+  "epochs_run": 12,
+  "best_val_acc": 0.9969760715224822,
+  "test_acc": 0.9972053263192504,
+  "test_loss": 0.8376791761753573,
+  "avg_inference_ms": 4.079785346984863,
+  "model_size_mb": 15.96682357788086,
+  "num_classes": 139,
+  "checkpoint": "runs\\experiment_1\\efficientnet_b0\\best.pt"
+}

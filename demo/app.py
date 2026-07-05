@@ -20,7 +20,7 @@ from inference import DB_PATH, Predictor, init_db, log_run
 
 st.set_page_config(page_title="Распознавание дорожных знаков", layout="centered")
 st.title("🚦 Распознавание дорожных знаков (RTSD)")
-st.caption("Демонстрационный модуль — лучшая модель **EfficientNet-B0** из сравнения 5 архитектур")
+st.caption("Демонстрационный модуль — лучшая модель **ResNet18** из сравнения 5 архитектур")
 
 MODEL_PATH = "models/best_model.pt"
 

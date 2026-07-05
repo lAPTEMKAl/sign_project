@@ -42,3 +42,27 @@ project/
   README.md
   requirements.txt
 ```
+
+## Быстрый старт
+
+```bash
+pip install -r requirements.txt
+
+# 1. Скачать и распаковать RTSD https://www.kaggle.com/datasets/watchman/rtsd-dataset (см. инструкцию в src/download_data.py)
+python src/download_data.py --target data/raw
+
+# 2. Подготовить train/val/test
+python src/prepare_data.py --raw data/raw --out data/processed --val-split 0.15 --test-split 0.15
+
+# 3. Обучить все 5 архитектур и получить сравнительную таблицу
+python src/run_all.py --data data/processed --epochs 20 --img-size 224 --out runs/experiment_1
+
+# 4. Оценить лучшую модель подробно (confusion matrix, ошибки)
+python src/evaluate.py --model models/best_model.pt --data data/processed/test --out runs/experiment_1/eval_best
+
+# 5. Запустить демо
+streamlit run demo/app.py
+
+# 6. Сгенерировать отчёт PDF/Excel по истории запусков
+python src/report_generator.py --history runs/experiment_1/history.db --out report/
+```
